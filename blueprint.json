@@ -29,8 +29,8 @@
 			"resourceTags": {
 				"type": "object",
 				"defaultValue": {
-					"Environment-Type": "Test",
-					"Project": "Track"
+					"Environment-Type": "PoC",
+					"Project": "Ellipse"
 				}
 			},
 			"webAppName": {

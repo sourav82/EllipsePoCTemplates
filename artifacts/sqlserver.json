@@ -23,6 +23,13 @@
 				},
 				"serverNamePrimary": {
 					"type": "string"
+				},
+				"resourceTags": {
+					"type": "object",
+					"defaultValue": {
+						"Environment-Type": "PoC",
+						"Project": "Ellipse"
+					}
 				}
 			},
 			"resources": [{
@@ -53,14 +60,11 @@
 						}
 					}
 				],
-				"tags": {
-					"Environment-Type": "Test",
-					"Project": "Track"
-				}
+				"tags":  "[parameters('resourceTags')]"
 			}]
 		},
 		"resourceGroup": "TestRG",
-		"displayName": "App Service Deployment",
+		"displayName": "SQL Server Deployment",
 		"parameters": {
 			"administratorLogin": {
 				"value": "[parameters('administratorLogin')]"
@@ -79,6 +83,9 @@
 			},
 			"serverNamePrimary": {
 				"value":"[parameters('serverNamePrimary')]"
+			},
+			"resourceTags": {
+				"value": "[parameters('resourceTags')]"
 			}
 		},
 		"type": "Microsoft.Blueprint/blueprints/artifacts",
