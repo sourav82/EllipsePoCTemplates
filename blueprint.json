@@ -51,9 +51,6 @@
 			"tier": {
 				"type": "string"
 			},
-			"skuSQLName": {
-				"type": "string"
-			},
 			"locationPrimary": {
 				"type": "string"
 			},
