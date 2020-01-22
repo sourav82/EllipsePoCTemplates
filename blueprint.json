@@ -1,0 +1,72 @@
+{
+	"properties": {
+		"description": "Blueprint for creating Test environment resource group and its resources",
+		"targetScope": "subscription",
+		"parameters": {
+			"contributors": {
+				"type": "array",
+				"metadata": {
+					"displayName": "Contributor IDs",
+					"description": "RBAC assignment ids for contributors",
+					"strongType": "PrincipalId"
+				}
+			},
+			"readers": {
+				"type": "array",
+				"metadata": {
+					"displayName": "Reader IDs",
+					"description": "RBAC assignment ids for readers",
+					"strongType": "PrincipalId"
+				}
+			},
+			"location": {
+				"type": "string",
+				"defaultValue": "uksouth",
+				"metadata": {
+					"description": "Location for all resources."
+				}
+			},
+			"resourceTags": {
+				"type": "object",
+				"defaultValue": {
+					"Environment-Type": "Test",
+					"Project": "Track"
+				}
+			},
+			"webAppName": {
+				"type": "string",
+				"metadata": {
+					"description": "That name is the name of our application. It has to be unique. Type a name followed by your resource group name. (<name>-<resourceGroupName>)"
+				}
+			},
+			"administratorLogin": {
+				"type": "string"
+			},
+			"sqlPassword": {
+				"type":"string",
+			},
+			"databaseName": {
+				"type": "string"
+			},
+			"tier": {
+				"type": "string"
+			},
+			"skuSQLName": {
+				"type": "string"
+			},
+			"locationPrimary": {
+				"type": "string"
+			},
+			"serverNamePrimary": {
+				"type": "string"
+			}
+
+		},
+		"resourceGroups": {
+			"TestRG": {
+				"description": "Resource group for Test environment"
+			}
+		}
+	},
+	"type": "Microsoft.Blueprint/blueprints"
+}
